@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DataCard from './DataCard'
+import SummaryByCountry from './SummaryByCountry'
 
 function Home() {
     const [data, setData] = useState([])
@@ -26,7 +27,7 @@ function Home() {
                 lon={props.Lon} date={props.Date} cases={props.Cases} status={props.Status}
                 />
             ))}
-           
+           <SummaryByCountry />
         </div>
     )
 }
